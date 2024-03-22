@@ -11,4 +11,13 @@
 #         ('mundo', 44, 20, 90, 'hola', 'mundo', 44)
 t1 = tuple(input().split())
 t2 = tuple(input().split())
-print(t2 + t1 + t2)
+union = t2 + t1 + t2
+
+resultado = []
+for elemento in union:
+    if elemento.isdigit():
+        resultado.append(elemento)
+    else:
+        resultado.append(f"'{elemento}'")
+
+print("(", ", ".join(resultado), ")", sep="")
