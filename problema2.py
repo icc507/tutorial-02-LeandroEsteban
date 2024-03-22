@@ -17,5 +17,7 @@ for elemento in t_inversa:
         resultado.append(elemento)
     else:
         resultado.append(f"'{elemento}'")
-
-print("(", ", ".join(resultado), ")", sep="")
+if len(resultado) == 1:
+    print("(", resultado[0], ",)", sep="")
+else:
+    print("(", ", ".join(resultado), ")", sep="")
